@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bytecoders.client.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <HBox prefHeight="216.0" prefWidth="218.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="4.0" prefWidth="233.0" text="Client Information Centre" textFill="#ebd910">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <GridPane prefHeight="371.0" prefWidth="371.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="422.0" minWidth="10.0" prefWidth="197.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="422.0" minWidth="0.0" prefWidth="26.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="22.0" prefWidth="176.0" text="Enter Client-ID:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="American Typewriter" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Name:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="American Typewriter" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="68.0" text="Address:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="American Typewriter" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ClientID" prefHeight="27.0" prefWidth="311.0" promptText="Example: Bramp-656-777" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Name" prefHeight="27.0" prefWidth="173.0" promptText="Example: Beer Store" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Street" prefHeight="27.0" prefWidth="148.0" promptText="unit#, Street" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+            
+            <ComboBox fx:id="Province" prefHeight="27.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4"> 
+            
+          <items>
+			<FXCollections fx:factory="observableArrayList">
+				<String fx:value="Province" />
+				<String fx:value="Ontario" />
+				<String fx:value="British Columbia" />
+				<String fx:value="Alberta" />
+				<String fx:value="Quebec" />
+				<String fx:value="Manitoba" />
+				<String fx:value="P.E.I" />
+				<String fx:value="Nova Scotia" />
+				<String fx:value="Newfoundland and Labrador" />
+			</FXCollections>
+		</items>
+            
+            </ComboBox>
+            <Label text="Phone Number:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="American Typewriter" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="PhoneNum" promptText="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            
+            
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="95.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="326.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="133.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="202.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="108.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="47.0" minHeight="6.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="47.0" minHeight="6.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="SubButton" mnemonicParsing="false" onAction="#SubmitInfo" prefHeight="27.0" prefWidth="122.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#UpdateInfo" prefHeight="27.0" prefWidth="116.0" text="Update" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="DeleteButton" mnemonicParsing="false" onAction="#DeleteInfo" text="Delete Client" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </bottom>
+   <right>
+      <GridPane prefHeight="334.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.505859375" minWidth="10.0" prefWidth="146.505859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.8470458984375" minWidth="10.0" prefWidth="53.494140625" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="134.85877227783203" minHeight="10.0" prefHeight="118.30583953857422" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.85877227783203" minHeight="10.0" prefHeight="39.09416198730469" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.85877227783203" minHeight="0.0" prefHeight="7.4370880126953125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="128.72938537597656" minHeight="10.0" prefHeight="50.56291198730469" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="95.01174926757812" minHeight="10.0" prefHeight="36.1529541015625" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.84706115722656" minHeight="10.0" prefHeight="25.8470458984375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="City" prefHeight="27.0" prefWidth="146.0" promptText="City" GridPane.rowIndex="3" />
+            <TextField fx:id="PCode" prefHeight="16.0" prefWidth="146.0" promptText="Postal Code" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

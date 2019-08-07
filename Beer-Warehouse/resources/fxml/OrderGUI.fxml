@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="434.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bytecoders.order.controller.OrderController">
+   <children>
+      <Label layoutX="24.0" layoutY="18.0" text="Client:" />
+      <ComboBox fx:id="cmbClient" layoutX="111.0" layoutY="14.0" prefWidth="150.0" />
+      <ListView fx:id="lstAvailableBatches" layoutX="24.0" layoutY="105.0" prefHeight="184.0" prefWidth="232.0" />
+      <ListView fx:id="lstSelectedBatches" layoutX="297.0" layoutY="105.0" prefHeight="184.0" prefWidth="232.0" />
+      <Button fx:id="btnSelectBatch" layoutX="263.0" layoutY="162.0" mnemonicParsing="false" onAction="#selectBatch" text="&gt;" />
+      <Button fx:id="btnDeselectBatch" layoutX="263.0" layoutY="200.0" mnemonicParsing="false" onAction="#deselectBatch" text="&lt;" />
+      <Label layoutX="24.0" layoutY="82.0" text="Batches Available:" />
+      <Label layoutX="300.0" layoutY="82.0" text="Batches Selected:" />
+      <Label layoutX="25.0" layoutY="339.0" text="Total Cost:" />
+      <Label layoutX="25.0" layoutY="368.0" text="Profit:" />
+      <Label layoutX="25.0" layoutY="312.0" text="Selling Price:" />
+      <TextField fx:id="txtSellingPrice" layoutX="98.0" layoutY="308.0" onAction="#priceChanged" />
+      <Button fx:id="btnCreateOrder" layoutX="442.0" layoutY="398.0" mnemonicParsing="false" onAction="#createOrder" text="Create Order" />
+      <Label fx:id="lblProfit" layoutX="68.0" layoutY="368.0" text="\$0" />
+      <Label fx:id="lblTotalCost" layoutX="91.0" layoutY="339.0" text="\$0" />
+      <Label fx:id="lblErrorInvalidPrice" layoutX="253.0" layoutY="312.0" text="*invalid price" textFill="RED" />
+      <Label fx:id="lblErrorSelectedBatch" layoutX="394.0" layoutY="82.0" text="*select at least one batch" textFill="RED" />
+      <Label layoutX="24.0" layoutY="51.0" text="Employee:" />
+      <ComboBox fx:id="cmbEmployee" layoutX="111.0" layoutY="47.0" prefWidth="150.0" />
+      <Button fx:id="btnClear" layoutX="20.0" layoutY="398.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+      <Label fx:id="lblErrorClientNotSelected" layoutX="276.0" layoutY="18.0" text="*select at least one batch" textFill="RED" />
+      <Label fx:id="lblErrorEmployeeNotSelected" layoutX="276.0" layoutY="51.0" text="*select at least one batch" textFill="RED" />
+      <ProgressIndicator fx:id="progressIndicatorAvailable" layoutX="114.0" layoutY="161.0" />
+   </children>
+</AnchorPane>

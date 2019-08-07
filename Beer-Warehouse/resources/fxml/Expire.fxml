@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="842.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bytecoders.losses.Controller">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="197.0" text="Expired Stock Management" textFill="#ff0303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="Expired" layoutX="63.0" layoutY="111.0" mnemonicParsing="false" onAction="#CheckExpired" text="Show Expired Items" />
+      <Button fx:id="Losses" layoutX="240.0" layoutY="111.0" mnemonicParsing="false" onAction="#CheckLosses" prefHeight="27.0" prefWidth="139.0" text="Show Losses" />
+      <Label layoutX="63.0" layoutY="55.0" text="Enter Today's Date:" />
+      <TextField fx:id="date" layoutX="211.0" layoutY="50.0" promptText="YYYY-MM-DD" />
+      <Label layoutX="12.0" layoutY="193.0" text="*Please Note: date must be entered exactly as prompted. Which includes the '-' as well. Example: 2019-08-03" />
+      <ListView fx:id="listExpired" layoutX="57.0" layoutY="250.0" prefHeight="194.0" prefWidth="574.0" />
+      <Label layoutX="60.0" layoutY="226.0" text="List of Expired batches:" textFill="RED" />
+      <Label fx:id="LossLabel" layoutX="131.0" layoutY="509.0" prefHeight="17.0" prefWidth="213.0" textFill="RED" />
+      <Label layoutX="119.0" layoutY="509.0" text="\$" />
+      <Label layoutX="60.0" layoutY="509.0" text="Losses:" textFill="#f80b0b" />
+   </children>
+</AnchorPane>

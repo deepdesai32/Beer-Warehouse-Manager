@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Gabriel Marques - N01013564
+ */ 
+ -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0"
+	prefWidth="380.0" xmlns="http://javafx.com/javafx/8.0.212"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.bytecoders.receipt.controller.Receipt_Controller">
+	<children>
+		<Label layoutX="13.0" layoutY="14.0" text="Order number" />
+		<Button fx:id="searchBtn" layoutX="302.0" layoutY="10.0"
+			mnemonicParsing="false" onAction="#searchOrder" text="Search" />
+		<ScrollPane layoutX="14.0" layoutY="44.0"
+			prefHeight="192.0" prefWidth="352.0">
+			<content>
+				<Text fx:id="outText" strokeType="OUTSIDE" strokeWidth="0.0"
+					wrappingWidth="348.0">
+					<font>
+						<Font size="11.0" />
+					</font>
+				</Text>
+			</content>
+		</ScrollPane>
+		<TextField fx:id="sendMailTField" layoutX="14.0"
+			layoutY="245.0" prefHeight="26.0" prefWidth="169.0" />
+		<Button fx:id="saveFileBtn" layoutX="303.0" layoutY="245.0"
+			mnemonicParsing="false" onAction="#saveFile" prefHeight="26.0"
+			prefWidth="63.0" text="Save" />
+		<Button fx:id="sendMailBtn" layoutX="189.0" layoutY="245.0"
+			mnemonicParsing="false" onAction="#sendFile" prefHeight="26.0"
+			prefWidth="100.0" text="Send e-Mail" />
+		<Separator layoutX="294.0" layoutY="245.0"
+			orientation="VERTICAL" prefHeight="26.0" prefWidth="0.0" />
+		<ComboBox fx:id="idList" editable="true" layoutX="111.0"
+			layoutY="10.0" prefHeight="26.0" prefWidth="54.0" visibleRowCount="7" />
+		<Button fx:id="refreshBtn" layoutX="172.0" layoutY="10.0"
+			mnemonicParsing="false" onAction="#refreshIDsList" prefHeight="26.0"
+			prefWidth="124.0" text="&lt;--- Refresh List" />
+
+	</children>
+	<opaqueInsets>
+		<Insets />
+	</opaqueInsets>
+</AnchorPane>

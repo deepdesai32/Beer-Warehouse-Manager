@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="488.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bytecoders.main.controller.BeerWarehouseMain_Controller">
+	<tabs>
+		<Tab text="Management">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="423.0">
+					<children>
+						<Button fx:id="btnBatches" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#openBatchesGUI" prefHeight="26.0" prefWidth="144.0" text="Manage Batches" />
+						<Button fx:id="btnOrders" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#openOrdersGUI" prefHeight="26.0" prefWidth="144.0" text="Manage Orders" />
+						<Button fx:id="btnStock" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onAction="#openStockGUI" prefWidth="144.0" text="Manage Stock" />
+                  <Button fx:id="btnClient" layoutX="14.0" layoutY="118.0" mnemonicParsing="false" onAction="#openClientGUI" prefHeight="27.0" prefWidth="144.0" text="Manage Client" />
+                  <Button fx:id="btnItem" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#openItemGUI" prefHeight="27.0" prefWidth="144.0" text="Manage Item" />
+                  <Button fx:id="btnEmployee" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#openEmployeeGUI" prefHeight="27.0" prefWidth="144.0" text="Manage Employee" />
+					</children>
+				</AnchorPane>
+			</content>
+		</Tab>
+		<Tab text="Reports">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+					<children>
+						<Button fx:id="showCostsBtn" layoutX="11.0" layoutY="53.0" mnemonicParsing="false" onAction="#showCosts" prefHeight="27.0" prefWidth="181.0" text="Quickly View Batch Cost" />
+						<Button fx:id="viewMgmtRepBtn" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewMgmtRep" text="Show Management Report" />
+					</children>
+				</AnchorPane>
+			</content>
+		</Tab>
+		<Tab text="Receipt">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+					<children>
+						<Button fx:id="genORcptBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#genORcpt" prefHeight="26.0" prefWidth="190.0" text="Generate Order Receipt" />
+					</children>
+				</AnchorPane>
+			</content>
+		</Tab>
+		<Tab text="Expired Product">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnRemoveExp" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#openRemoveExpGUI" prefHeight="27.0" prefWidth="275.0" text="Remove Batch From System" />
+                  <Button fx:id="showLossesBtn" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" onAction="#showLosses" prefHeight="27.0" prefWidth="280.0" text="Show Expired Items and Financial Losses" />
+               </children></AnchorPane>
+			</content>
+		</Tab>
+	</tabs>
+</TabPane>

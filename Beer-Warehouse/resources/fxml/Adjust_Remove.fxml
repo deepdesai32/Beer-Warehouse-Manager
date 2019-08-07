@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="294.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bytecoders.expired.Controller">
+   <children>
+      <Label layoutX="24.0" layoutY="14.0" text="Removal and Adjustment Manager" textFill="#ee0808">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="63.0" text="Manually Remove Products:" textFill="#0b0cd9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="114.0" text="Batch ID:" />
+      <Button fx:id="mRemove" layoutX="95.0" layoutY="200.0" mnemonicParsing="false" onAction="#manRemove" prefHeight="27.0" prefWidth="258.0" text="Remove Expired Batch" />
+      <TextField fx:id="batchID" layoutX="168.0" layoutY="109.0" promptText="Batch ID" />
+   </children>
+</AnchorPane>

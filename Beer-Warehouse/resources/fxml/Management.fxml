@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Gabriel Marques - N01013564
+ */ 
+ -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0"
+	prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.212"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.bytecoders.management.controller.Management_Controller">
+	<children>
+		<Label layoutX="14.0" layoutY="14.0" text="Start Date" />
+		<Button fx:id="viewBtn" layoutX="248.0" layoutY="9.0"
+			mnemonicParsing="false" onAction="#getInfo" prefHeight="26.0"
+			prefWidth="73.0" text="Get Info" />
+		<ScrollPane layoutX="10.0" layoutY="87.0"
+			prefHeight="159.0" prefWidth="317.0">
+			<content>
+				<Text fx:id="outText" strokeType="OUTSIDE" strokeWidth="0.0"
+					wrappingWidth="259.0">
+					<font>
+						<Font name="DejaVu Sans Mono" size="11.0" />
+					</font>
+				</Text>
+			</content>
+		</ScrollPane>
+		<Button fx:id="saveBtn" layoutX="248.0" layoutY="44.0"
+			mnemonicParsing="false" onAction="#saveToFile" prefHeight="26.0"
+			prefWidth="73.0" text="Save" />
+		<DatePicker fx:id="dateFrom" layoutX="93.0" layoutY="9.0"
+			prefHeight="26.0" prefWidth="135.0" />
+		<DatePicker fx:id="dateTo" layoutX="93.0" layoutY="44.0"
+			prefHeight="26.0" prefWidth="135.0" />
+		<Label layoutX="14.0" layoutY="49.0" text="End Date" />
+		<Separator layoutX="236.0" layoutY="9.0"
+			orientation="VERTICAL" prefHeight="62.0" prefWidth="6.0" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Gabriel Marques - N01013564
+ */ 
+ -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0"
+	prefWidth="242.0" xmlns="http://javafx.com/javafx/8.0.212"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.bytecoders.costs.controller.Costs_Controller">
+	<children>
+		<Label layoutX="10.0" layoutY="20.0" text="Batch" />
+		<Label layoutX="10.0" layoutY="57.0" text="Total cost $" />
+		<Label fx:id="batchCostLbl" layoutX="90.0" layoutY="57.0"
+			text="0" />
+		<Button fx:id="findBatchBtn" layoutX="14.0" layoutY="82.0"
+			mnemonicParsing="false" onAction="#searchBatch" prefHeight="26.0"
+			prefWidth="184.0" text="Display Batch Cost" />
+		<Button fx:id="refreshBtn" layoutX="128.0" layoutY="15.0"
+			mnemonicParsing="false" onAction="#refreshIDsList" prefHeight="26.0"
+			prefWidth="100.0" text="&lt;--- Refresh" />
+		<ComboBox fx:id="idList" editable="true" layoutX="49.0"
+			layoutY="15.0" prefHeight="26.0" prefWidth="77.0" visibleRowCount="7" />
+		<Button fx:id="rstBtn" layoutX="172.0" layoutY="46.0"
+			mnemonicParsing="false" onAction="#reset" text="Reset" />
+	</children>
+</AnchorPane>
